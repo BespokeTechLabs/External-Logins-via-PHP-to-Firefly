@@ -1,7 +1,8 @@
 External-Logins-via-PHP-to-Firefly
 ==================================
 
-PHP Firefly External Logon Authoriser - http://fireflysolutions.co.uk/
+PHP Firefly External Logon Authoriser
+Written by Lewis Smallwood on 5th May 2014 - http://www.lewistech.co.uk/
 
 The PHP file called loginHandler.php will interpret HTTP POST requests containing the users authentication data.
 
