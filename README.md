@@ -28,7 +28,7 @@ The local login form should take the following syntax:
 	   <center></br><input type="submit" name="submit" style="width: 290px;" value="Submit" /></br></br></center>
 	</form>
 
-I would like to point out that this code is still used for testing purposes within a school enviroment and could change depending on Firefly Encryptions and Updates. But for a "stumble in the dark" I hope this may solve some challenges other developers may be facing with implementation within School's or Businesses :)
+I would like to point out that this code is still used for testing purposes within a school environment and could change depending on Firefly Encryptions and Updates. But for a "stumble in the dark" I hope this may solve some challenges other developers may be facing with implementations within Schools or Businesses :)
 
 Finally, Firefly is the respective property of Firefly Solutions LLP. (2014). I would highly suggest crediting them whenever this is used.
 
