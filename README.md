@@ -9,7 +9,7 @@ The PHP file called loginHandler.php will interpret HTTP POST requests containin
 
 This file generally should be stored on a separate server to your firefly virtual machine where you wish to pull the request.
 
-This code was originally used as a method of authicating users on a separate web interface. This code takes the username and password input from your HTML form and then POSTS the contents to the loginHandler.php page which sends a server side network request to the specified Firefly server. The local script will then return if Firefly logged in successfully or received an error returning the state to the local script.
+This code was originally used as a method of authenticating users on a separate web interface. This code takes the username and password input from your HTML form and then POSTS the contents to the loginHandler.php page which sends a server side network request to the specified Firefly server. The local script will then return if Firefly logged in successfully or received an error returning the state to the local script.
 
 The local login form should take the following syntax:
 
@@ -28,7 +28,7 @@ The local login form should take the following syntax:
 	   <center></br><input type="submit" name="submit" style="width: 290px;" value="Submit" /></br></br></center>
 	</form>
 
-I would like to point out that this code is still used for testing purposes within a school environment and could change depending on Firefly Encryptions and Updates. But for a "stumble in the dark" I hope this may solve some challenges other developers may be facing with implementations within Schools or Businesses :)
+I would like to point out that this code is still used for testing purposes within a school environment and could change depending on Firefly Encryptions and updates. But for a "stab in the dark" I hope this may solve some challenges other developers may be facing with implementations within Schools or Businesses :)
 
 Finally, Firefly is the respective property of Firefly Solutions LLP. (2014). I would highly suggest crediting them whenever this is used.
 
