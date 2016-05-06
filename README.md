@@ -1,35 +1,42 @@
 External-Logins-via-PHP-to-Firefly
 ==================================
 
-PHP Firefly External Logon Authoriser
+This is a PHP class for getting user details from a Firefly page. It is a custom, very hacky, external logon authenticator.
 
-Written by Lewis Smallwood on 5th May 2014 - http://www.lewistech.co.uk/
+Written by Lewis Smallwood on 5th May 2014 and modified on 6th May 2016 - http://www.bespoketechlabs.co.uk/
 
-The PHP file called loginHandler.php will interpret HTTP POST requests containing the users authentication data.
+The PHP file called login.php contains the class `FireFlyUserLogin` which takes four parameters when initialising.
 
-This file generally should be stored on a separate server to your firefly virtual machine where you wish to pull the request.
+Username, Password, LoginPage, and NextPage.
 
-This code was originally used as a method of authenticating users on a separate web interface. This code takes the username and password input from your HTML form and then POSTS the contents to the loginHandler.php page which sends a server side network request to the specified Firefly server. The local script will then return if Firefly logged in successfully or received an error returning the state to the local script.
+* **Username** - Your Firefly account username.
+* **Password** - Your Firefly account password.
+* **LoginPage** - A link to the page in which you login to Firefly.
+e.g. `https://firefly.clevedonschool.org.uk/login/login.aspx?prelogin=https%3a%2f%2ffirefly.clevedonschool.org.uk%2fdashboard&kr=ActiveDirectoryKeyRing`
+* **NextPage** - A link to the page that follows when a login is complete. This is the same as "prelogin" passed in the previous url
+e.g. `https://firefly.clevedonschool.org.uk/dashboard`
 
-The local login form should take the following syntax:
+This file should generally be hosted on a separate server to your Firefly virtual machine where you wish to make the request between systems however it can have a range of purposes.
 
-	<form method="post" action="loginHandler.php">
-	   <center><p>Please enter your username and password.</p></center>
-	   <center><table border="0" cellspacing="0px" cellpadding="5px" bgcolor="#FFFFFF">
-		<tr>
-		   <td width="50px">Username: </td>
-		   <td><input type="text" name="username" style="width: 200px;" /></td>
-		</tr>
-		<tr>
-		   <td width="50px">Password: </td>
-		   <td><input type="password" name="password" style="width: 200px;" /></td>
-		</tr>
-	   </table></center>
-	   <center></br><input type="submit" name="submit" style="width: 290px;" value="Submit" /></br></br></center>
-	</form>
+This code was originally used as a method of authenticating users through a separate web interface. This code takes the username and password and then POSTS the contents to the specified Firefly server. The response will then be interpretted and returned if the Firefly login was successful.
 
-I would like to point out that this code is still used for testing purposes within a school environment and could change depending on Firefly Encryptions and updates. But for a "stab in the dark" I hope this may solve some challenges other developers may be facing with implementations within Schools or Businesses :)
+The class has been modified to grab extra user details.
+There is an example implementation shown in `example.php`. The result of this running successfully retured:
 
-Finally, Firefly is the respective property of Firefly Solutions LLP. (2014). I would highly suggest crediting them whenever this is used.
+**Example of a successful login**
+
+![Successful Example](example-success.png)
+
+**Example of a failed login**
+
+![Failed Example](example-fail.png)
+
+I would like to point out that this code is still used for testing purposes within a school environment and could change depending on Firefly Encryption methods and updates. But not bad for a "stab in the dark"! I hope this code may be useful to solve some challenges other developers may be facing.
+
+Finally, Firefly is the respective property of Firefly Solutions LLP. (2016). I would highly suggest crediting them whenever this is used.
 
 Lewis Smallwood
+
+**Bespoke Technology Labs**
+
+Footnote: Please bare in mind I was aged 15 when I created this code hence I cannot guarantee any level of reliability in this solution. I provide this code as-is, it can be used at your own risk.
